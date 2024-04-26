@@ -22,8 +22,20 @@ class UserLogin(APIView):
         
         
 class AddProduct(APIView):
-    def get(self, request, pk=None):
-        username = request.data.get('user')
+    def get(self, request, *args, **kwargs):
+        try:
+            username = kwargs.get('username')
+            username = User.objects.filter(username=username).first()
+            print(username)
+            if username:
+                product = Product.objects.filter(user=username).values()
+            return Response({'error': False, 'data': product}, status.HTTP_200_OK)
+        except Exception as e:
+            print(str(e))
+            return Response({'error': True, 'message': str(e)}, status.HTTP_400_BAD_REQUEST)
+        
+        
+        
     def post(self, request):
         try:
             product_name = request.data.get('product_name')
@@ -31,10 +43,34 @@ class AddProduct(APIView):
             price = request.data.get('price')
             brand = request.data.get('brand')
             tag = request.data.get('tag')
+            username = request.data.get('username')
             
-            items = Product(product_name=product_name, description=description, price=price, brand=brand, tag=tag)
+            print(product_name, description, price, brand, tag, username)
+            
+            items = Product.objects.create(product_name=product_name, description=description, price=price, brand=brand, tag=tag)
+            
+            user = User.objects.filter(username=username).first()
+            items.user = user
             items.save()
             return Response({'error': False, 'message': 'Item saved successfully'}, status.HTTP_201_CREATED)
         except Exception as e:
             print(str(e))
             return Response({'error': True, 'message': str(e)}, status.HTTP_400_BAD_REQUEST)
+        
+        
+    def delete(self, request, *args, **kwargs):
+        try:
+            kwrd = kwargs.get('username').split(',')
+            username = kwrd[0]
+            pid = int(kwrd[1])
+            user = User.objects.filter(username=username).first()
+            if user:
+                product = Product.objects.filter(id=pid).first()
+                if product:
+                    product.delete()
+            
+            return Response({'error': False, 'message': 'Product deleted successfully'}, status.HTTP_200_OK)
+        except Exception as e:
+            print(str(e))
+            return Response({'error': True, 'message': str(e)}, status.HTTP_400_BAD_REQUEST)
+        
