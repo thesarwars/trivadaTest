@@ -20,4 +20,5 @@ from trivadatestApp import views
 urlpatterns = [
     path("admin/", admin.site.urls),
     path('login/', views.UserLogin.as_view(), name="user_login"),
+    path('add-product/', views.AddProduct.as_view(), name="add_product"),
 ]
