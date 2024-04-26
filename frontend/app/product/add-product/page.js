@@ -1,5 +1,5 @@
 "use client";
-import ApiUrl from "@/app/url-lib/api-url";
+import ApiUrl from "../../../app/url-lib/api-url";
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 
