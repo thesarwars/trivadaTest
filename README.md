@@ -3,6 +3,7 @@
 Here I've made the projects in ReactJS for frontend and Django for backend.
 
 <h3>Task 1 completed:</h3>
+
 1. Create a login page with email and password fields.
 2. Implement authentication using Angular services.
 3. Save user authentication data securely in the browser (e.g., using local storage or session storage).
@@ -12,7 +13,9 @@ Here I've made the projects in ReactJS for frontend and Django for backend.
 7. Include an &quot;Add Product&quot; button above the table.
 8. Implement functionality to add, edit, and delete products without page reload.
 
+
 <h3>Task 2 Completed.</h3>
+
 1. Converted figma design to HTML, CSS. I've used tailwind css here.
 
 <b>Don't worry, it's very simple to activate, just run some commands.</b>
