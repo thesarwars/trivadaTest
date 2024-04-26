@@ -49,17 +49,19 @@ After that, go to the <b>frontend</b> folder and open another <b>terminal</b>.
 
 
 <h4>demo credentials:</h4>
-username: sarwars
+username: sarwars<br/>
 pass: 123456
 
 
 screenshots:
 
-<h4> Second Task Screenshot: [http://localhost:3000/second-task](http://localhost:3000/second-task)</h4>
+<h4> Second Task Screenshot:</h4>   [http://localhost:3000/second-task](http://localhost:3000/second-task)
+
 ![task2](/frontend/public/second_task.png)
 
 
-<h4>Add Product Screenshot: [http://localhost:3000/product/add-product](http://localhost:3000/product/add-product)</h4>
+<h4>Add Product Screenshot:</h4>     [http://localhost:3000/product/add-product](http://localhost:3000/product/add-product)
+
 ![add product](/frontend/public/add_item.png)
 
 
