@@ -4,7 +4,7 @@ import axios from "axios";
 import { useRouter } from "next/navigation";
 import React, { useEffect, useState } from "react";
 
-export default function SingIn() {
+export default function UserLogin() {
   const router = useRouter();
   const [userLogin, setUserLogin] = useState({
     username: "",
