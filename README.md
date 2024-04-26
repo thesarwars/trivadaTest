@@ -55,11 +55,11 @@ pass: 123456
 
 screenshots:
 
-<h4> Second Task Screenshot: (http://localhost:3000/second-task)</h4>
-![task2](./frontend/public/second_task.png)
+<h4> Second Task Screenshot: [http://localhost:3000/second-task](http://localhost:3000/second-task)</h4>
+![task2](/frontend/public/second_task.png)
 
 
-<h4>Add Product Screenshot: (http://localhost:3000/product/add-product)</h4>
-![add product](./frontend/public/add_item.png)
+<h4>Add Product Screenshot: [http://localhost:3000/product/add-product](http://localhost:3000/product/add-product)</h4>
+![add product](/frontend/public/add_item.png)
 
 
