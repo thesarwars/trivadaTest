@@ -115,10 +115,10 @@ export default function Product() {
                     className="w-20 px-2 text-white flex ms-3 mt-3"
                   >
                     <div>
-                      <button>Edit</button>
+                      <button className="border-cyan-600 border items-center flex justify-center w-10 px-2 py-1 bg-cyan-600 text-white text-xs rounded-md">Edit</button>
                     </div>{" "}
                     &nbsp;&nbsp;&nbsp;
-                    <div>
+                    <div className="border-red-600 border items-center flex justify-center w-24 px-2 py-1 bg-red-600 text-white rounded-md text-xs">
                       <button onClick={() => handleDelete(item.id)}>
                         Remove
                       </button>

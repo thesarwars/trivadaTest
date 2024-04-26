@@ -1,6 +1,7 @@
-import { Inter } from "next/font/google";
+import { Inter, Teko } from "next/font/google";
 import "./globals.css";
 
+const teko = Teko({ subsets: ["latin"] });
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
